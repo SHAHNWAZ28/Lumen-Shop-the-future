@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:wght@200..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #fcf9fa;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+button {
+  cursor: pointer;
+  text-wrap: nowrap;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+nav {
+  min-height: 5rem;
+  width: 100%;
+  border-bottom: 2px solid #e20e14;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+}
+
+.logo_container {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.logo {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 10px;
+  background-color: #e20e14;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4rem;
+}
+
+.logo_container > h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+nav > button {
+  padding: 0.8rem 1.3rem;
+  border: none;
+  border-radius: 25px;
+  background-color: #e20e14;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+header {
+  min-height: calc(100vh - 5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 3rem 2rem;
+}
+
+header > h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.cart_length {
+  color: #777;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.cart_items_container {
+  width: 100%;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cart_product {
+  width: 100%;
+  background-color: white;
+  border-radius: 20px;
+  padding: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 12px;
+}
+
+.cart_product > img {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.cart_product > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.cart_product > div > h1 {
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
+
+.cart_product > div > h3 {
+  color: #e20e14;
+}
+
+.cart_product > button {
+  border: none;
+  border-radius: 12px;
+  background-color: #e20e14;
+  color: white;
+  padding: 0.9rem 1.5rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.order_summary_container {
+  width: 100%;
+  background-color: white;
+  border-radius: 25px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 12px;
+}
+
+.order_summary_container > aside {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.15rem;
+}
+
+.order_summary_container > button {
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  background-color: #e20e14;
+  color: white;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+@media (max-width: 992px) {
+  nav {
+    padding: 1rem;
+  }
+
+  header {
+    padding: 2rem 1rem;
+  }
+
+  .cart_product {
+    gap: 1rem;
+  }
+
+  .cart_product > img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .cart_product {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cart_product > div {
+    align-items: center;
+  }
+
+  .cart_product > button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  html {
+    font-size: 14px;
+  }
+
+  header {
+    padding: 1.5rem 0.8rem;
+  }
+
+  .cart_product {
+    padding: 1rem;
+  }
+
+  .cart_product > img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .cart_product > div > h1 {
+    font-size: 1.1rem;
+  }
+
+  .order_summary_container {
+    padding: 1.2rem;
+  }
+
+  .order_summary_container > aside {
+    font-size: 1rem;
+  }
+
+  nav > button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 13px;
+  }
+
+  .logo_container > h1 {
+    font-size: 1.5rem;
+  }
+
+  .cart_product > img {
+    width: 90px;
+    height: 90px;
+  }
+}
